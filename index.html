@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Program Terbaik 2025 - Dapatkan Uang dari HP Anda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Memuat...</p>
+    </div>
+
+    <!-- Halaman Awal (Landing Page) -->
+    <div id="landingPage" class="page active">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <span>AffiliatePro</span>
+                </div>
+                <nav class="nav">
+                    <button class="btn-login" onclick="showPage('loginPage')">Masuk</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Dapatkan Uang dari HP Anda</h1>
+                    <h2 class="hero-subtitle">Cukup Share Link, Komisi Otomatis Masuk!</h2>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Affiliate Aktif</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Rp 2.5M+</span>
+                            <span class="stat-label">Total Komisi</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tanpa stok barang</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tanpa modal</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tanpa ribet packing</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-large" onclick="showPage('loginPage')">
+                        DAFTAR SEKARANG – GRATIS 100%
+                    </button>
+                    <p class="hero-note">Hanya 1 menit, langsung dapat link affiliate Anda!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">Affiliate Program Terbaik 2025</h2>
+                <p class="section-subtitle">Komisi Hingga 20% per Penjualan!</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Share Link Produk</h3>
+                        <p>Orang beli → Komisi langsung masuk rekening</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <h3>Ribuan Produk</h3>
+                        <p>Brand ternama: fashion, elektronik, kecantikan, dll</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h3>Komisi Tinggi</h3>
+                        <p>10% – 50% per transaksi</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Gratis Daftar</h3>
+                        <p>Mulai hari ini, dibayar besok!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Apa Kata Mereka?</h2>
+                <div class="testimonials-scroll" id="testimonialsScroll">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Jutaan orang belanja online setiap hari</h2>
+                <p>Kenapa bukan dari link Anda?</p>
+                <button class="btn-primary btn-large" onclick="showPage('loginPage')">
+                    MULAI MENGHASILKAN SEKARANG
+                </button>
+                <p class="cta-note">100% Gratis • Tanpa Syarat • Bisa Dari HP</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Halaman Login/Register -->
+    <div id="loginPage" class="page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <button class="back-btn" onclick="showPage('landingPage')">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <span>AffiliatePro</span>
+                </div>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchAuthTab('login')">Masuk</button>
+                <button class="tab-btn" onclick="switchAuthTab('register')">Daftar</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginForm" class="auth-form active">
+                <h2>Selamat Datang Kembali!</h2>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="loginEmail" required placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" required placeholder="Masukkan password">
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Masuk</button>
+                </form>
+                <p class="auth-link">
+                    <a href="#" onclick="showForgotPassword()">Lupa Password?</a>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="registerForm" class="auth-form">
+                <h2>Daftar Sekarang!</h2>
+                <form onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="regUsername" required placeholder="Pilih username">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="regEmail" required placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor HP</label>
+                        <input type="tel" id="regPhone" required placeholder="08123456789">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="regPassword" required placeholder="Minimal 6 karakter">
+                    </div>
+                    <div class="form-group">
+                        <label>Konfirmasi Password</label>
+                        <input type="password" id="regConfirmPassword" required placeholder="Ulangi password">
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Daftar Gratis</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Halaman Dashboard Affiliate -->
+    <div id="dashboardPage" class="page">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="container">
+                <div class="header-left">
+                    <button class="menu-btn" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <i class="fas fa-coins"></i>
+                        <span>AffiliatePro</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <span class="user-name" id="userName">User</span>
+                    <button class="logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Side Menu -->
+        <div id="sideMenu" class="side-menu">
+            <nav class="menu-nav">
+                <a href="#" class="menu-item active" onclick="showDashboardSection('overview')">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="menu-item" onclick="showDashboardSection('products')">
+                    <i class="fas fa-box"></i>
+                    <span>Produk</span>
+                </a>
+                <a href="#" class="menu-item" onclick="showPage('membershipPage')">
+                    <i class="fas fa-crown"></i>
+                    <span>Membership</span>
+                </a>
+                <a href="#" class="menu-item" onclick="showDashboardSection('profile')">
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <div id="overviewSection" class="dashboard-section active">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3 id="clickCount">0</h3>
+                            <p>Klik</p>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3 id="orderCount">0</h3>
+                            <p>Pesanan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="metric-info">
+                            <h3 id="balance">Rp 0</h3>
+                            <p>Saldo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Withdrawal Notifications -->
+                <div class="withdrawal-notifications">
+                    <h3>Penarikan Berhasil</h3>
+                    <div class="notifications-scroll" id="notificationsScroll">
+                        <!-- Notifications will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Withdraw Button -->
+                <div class="withdraw-section">
+                    <button class="btn-primary btn-large" onclick="showWithdrawForm()">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Tarik Komisi (Withdraw)
+                    </button>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-row">
+                        <span>Level Membership:</span>
+                        <span class="stat-value" id="userLevel">Warrior</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Komisi Aktif:</span>
+                        <span class="stat-value" id="activeCommission">5%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Link Affiliate:</span>
+                        <button class="btn-copy" onclick="copyAffiliateLink()">
+                            <i class="fas fa-copy"></i>
+                            Salin Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div id="productsSection" class="dashboard-section">
+                <h2>Daftar Produk</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profileSection" class="dashboard-section">
+                <h2>Profil Saya</h2>
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3 id="profileName">User</h3>
+                        <p id="profileEmail">user@example.com</p>
+                        <p id="profilePhone">08123456789</p>
+                        <div class="profile-level">
+                            <span class="level-badge" id="profileLevel">Warrior</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Halaman Membership -->
+    <div id="membershipPage" class="page">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="container">
+                <div class="header-left">
+                    <button class="menu-btn" onclick="showPage('dashboardPage')">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="logo">
+                        <i class="fas fa-coins"></i>
+                        <span>AffiliatePro</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="membership-content">
+            <h1>Upgrade Membership</h1>
+            <p>Dapatkan komisi lebih tinggi dengan level membership yang lebih baik</p>
+            
+            <div class="membership-grid" id="membershipGrid">
+                <!-- Membership cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Halaman Admin (Tersembunyi) -->
+    <div id="adminPage" class="page">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="container">
+                <div class="header-left">
+                    <button class="menu-btn" onclick="showPage('dashboardPage')">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="logo">
+                        <i class="fas fa-cogs"></i>
+                        <span>Admin Dashboard</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <!-- Admin Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" onclick="showAdminTab('users')">
+                    <i class="fas fa-users"></i>
+                    Data User
+                </button>
+                <button class="admin-tab-btn" onclick="showAdminTab('products')">
+                    <i class="fas fa-box"></i>
+                    Produk
+                </button>
+                <button class="admin-tab-btn" onclick="showAdminTab('settings')">
+                    <i class="fas fa-cog"></i>
+                    Pengaturan Global
+                </button>
+            </div>
+
+            <!-- Users Tab -->
+            <div id="usersTab" class="admin-tab active">
+                <div class="tab-header">
+                    <h2>Data User</h2>
+                    <button class="btn-primary" onclick="exportUserData()">
+                        <i class="fas fa-download"></i>
+                        Export Data
+                    </button>
+                </div>
+                <div class="users-table-container">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Nomor HP</th>
+                                <th>Level</th>
+                                <th>Klik</th>
+                                <th>Pesanan</th>
+                                <th>Saldo</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Users data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Products Tab -->
+            <div id="productsTab" class="admin-tab">
+                <div class="tab-header">
+                    <h2>Manajemen Produk</h2>
+                    <button class="btn-primary" onclick="showAddProductForm()">
+                        <i class="fas fa-plus"></i>
+                        Tambah Produk Baru
+                    </button>
+                </div>
+                <div class="products-table-container">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Nama Produk</th>
+                                <th>Harga</th>
+                                <th>Komisi</th>
+                                <th>Gambar</th>
+                                <th>URL Produk</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <!-- Products data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div id="settingsTab" class="admin-tab">
+                <h2>Pengaturan Global</h2>
+                
+                <!-- Bank Settings -->
+                <div class="settings-section">
+                    <h3>Info Rekening (Untuk Upgrade)</h3>
+                    <form class="settings-form" onsubmit="saveBankSettings(event)">
+                        <div class="form-group">
+                            <label>Nama Bank</label>
+                            <input type="text" id="bankName" placeholder="BCA, Mandiri, dll">
+                        </div>
+                        <div class="form-group">
+                            <label>Nomor Rekening</label>
+                            <input type="text" id="bankAccount" placeholder="1234567890">
+                        </div>
+                        <div class="form-group">
+                            <label>Nama Admin</label>
+                            <input type="text" id="adminName" placeholder="Nama Admin">
+                        </div>
+                        <button type="submit" class="btn-primary">Simpan</button>
+                    </form>
+                </div>
+
+                <!-- Membership Settings -->
+                <div class="settings-section">
+                    <h3>Harga & Komisi Membership</h3>
+                    <div class="membership-settings-grid" id="membershipSettingsGrid">
+                        <!-- Membership settings will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Contact Settings -->
+                <div class="settings-section">
+                    <h3>Tombol Hubungi Admin</h3>
+                    <form class="settings-form" onsubmit="saveContactSettings(event)">
+                        <div class="form-group">
+                            <label>URL Kontak (WA/Telegram)</label>
+                            <input type="url" id="contactUrl" placeholder="https://wa.me/628123456789">
+                        </div>
+                        <button type="submit" class="btn-primary">Simpan</button>
+                    </form>
+                </div>
+
+                <!-- Withdrawal Control -->
+                <div class="settings-section">
+                    <h3>Kontrol Penarikan (Withdraw)</h3>
+                    <div class="withdraw-control">
+                        <label class="switch">
+                            <input type="checkbox" id="withdrawEnabled" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span>Enable Withdrawal</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Minimal Penarikan</label>
+                        <input type="number" id="minWithdraw" placeholder="50000" value="50000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Admin Access Button -->
+    <button class="admin-access-btn" onclick="showAdminAccess()">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Contact Admin Button (Floating) -->
+    <a href="#" id="contactAdminBtn" class="contact-admin-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modals -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModal()"></div>
+    
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Lupa Password</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleForgotPassword(event)">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="forgotEmail" required placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password Baru</label>
+                    <input type="password" id="newPassword" required placeholder="Minimal 6 karakter">
+                </div>
+                <div class="form-group">
+                    <label>Konfirmasi Password Baru</label>
+                    <input type="password" id="confirmNewPassword" required placeholder="Ulangi password">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Withdraw Modal -->
+    <div id="withdrawModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Form Penarikan</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleWithdraw(event)">
+                <div class="form-group">
+                    <label>Nama</label>
+                    <input type="text" id="withdrawName" required placeholder="Nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label>Nomor Rekening</label>
+                    <input type="text" id="withdrawAccount" required placeholder="1234567890">
+                </div>
+                <div class="form-group">
+                    <label>Bank</label>
+                    <select id="withdrawBank" required>
+                        <option value="">Pilih Bank</option>
+                        <option value="BCA">BCA</option>
+                        <option value="Mandiri">Mandiri</option>
+                        <option value="BNI">BNI</option>
+                        <option value="BRI">BRI</option>
+                        <option value="CIMB">CIMB Niaga</option>
+                        <option value="Danamon">Danamon</option>
+                        <option value="Permata">Permata</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Jumlah Penarikan</label>
+                    <input type="number" id="withdrawAmount" required placeholder="Minimal Rp 50.000">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Konfirmasi Penarikan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Upgrade Modal -->
+    <div id="upgradeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Upgrade Membership</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="upgrade-content">
+                <p>Upgrade membership untuk mengakses fitur ini!</p>
+                <button class="btn-primary btn-full" onclick="showPage('membershipPage'); closeModal();">
+                    Upgrade Sekarang
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit User</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleEditUser(event)">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="editUserEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Nomor HP</label>
+                    <input type="tel" id="editUserPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>Level Membership</label>
+                    <select id="editUserLevel" required>
+                        <option value="Warrior">Warrior</option>
+                        <option value="Master">Master</option>
+                        <option value="Grandmaster">Grandmaster</option>
+                        <option value="Epic">Epic</option>
+                        <option value="Legend">Legend</option>
+                        <option value="Mythic">Mythic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Klik</label>
+                    <input type="number" id="editUserClicks" value="0">
+                </div>
+                <div class="form-group">
+                    <label>Pesanan</label>
+                    <input type="number" id="editUserOrders" value="0">
+                </div>
+                <div class="form-group">
+                    <label>Saldo</label>
+                    <input type="number" id="editUserBalance" value="0">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Simpan Perubahan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Tambah Produk Baru</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleProductSubmit(event)">
+                <div class="form-group">
+                    <label>Nama Produk</label>
+                    <input type="text" id="productName" required placeholder="Nama produk">
+                </div>
+                <div class="form-group">
+                    <label>Harga</label>
+                    <input type="number" id="productPrice" required placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Komisi (%)</label>
+                    <input type="number" id="productCommission" required placeholder="0" min="0" max="100">
+                </div>
+                <div class="form-group">
+                    <label>URL Gambar</label>
+                    <input type="url" id="productImage" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label>URL Produk</label>
+                    <input type="url" id="productUrl" required placeholder="https://example.com/product">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Simpan Produk</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Access Modal -->
+    <div id="adminAccessModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Access</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="handleAdminAccess(event)">
+                <div class="form-group">
+                    <label>Kode Akses</label>
+                    <input type="password" id="adminCode" required placeholder="Masukkan kode akses">
+                </div>
+                <button type="submit" class="btn-primary btn-full">Masuk</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    
+    <!-- Upgrade Confirmation Modal -->
+    <div id="upgradeConfirmModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Konfirmasi Upgrade Membership</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="upgrade-confirm-content">
+                <div class="upgrade-info">
+                    <h4>Detail Upgrade</h4>
+                    <div class="info-row">
+                        <span>Level Saat Ini:</span>
+                        <span id="currentLevelDisplay">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span>Upgrade Ke:</span>
+                        <span id="targetLevelDisplay">-</span>
+                    </div>
+                    <div class="info-row highlight">
+                        <span>Total Pembayaran:</span>
+                        <span id="upgradePriceDisplay">-</span>
+                    </div>
+                </div>
+                
+                <div class="bank-info">
+                    <h4>Informasi Pembayaran</h4>
+                    <div class="bank-details">
+                        <div class="bank-row">
+                            <i class="fas fa-university"></i>
+                            <span id="paymentBank">-</span>
+                        </div>
+                        <div class="bank-row">
+                            <i class="fas fa-user"></i>
+                            <span id="paymentName">-</span>
+                        </div>
+                        <div class="bank-row">
+                            <i class="fas fa-credit-card"></i>
+                            <span id="paymentAccount">-</span>
+                        </div>
+                    </div>
+                    <div class="payment-note">
+                        <p><strong>Catatan:</strong></p>
+                        <p>1. Transfer jumlah yang tepat sesuai total pembayaran</p>
+                        <p>2. Simpan bukti transfer untuk verifikasi</p>
+                        <p>3. Upgrade akan diproses maksimal 1x24 jam</p>
+                        <p>4. Hubungi admin jika ada kendala</p>
+                    </div>
+                </div>
+                
+                <div class="upgrade-actions">
+                    <button class="btn-secondary" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                        Batal
+                    </button>
+                    <button class="btn-pricary" onclick="confirmUpgradePayment()">
+                        <i class="fab fa-whatsapp"></i>
+                        Konfirmasi via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
